@@ -128,7 +128,7 @@ public class Main {
         //基础css
         {
             String url = jarPath + "!/Style.css";
-            WriteAllText(MakeFilePath(DirStr,"Build","Style.css"),
+            WriteAllText(MakeFilePath(DirStr,"Include","Style.css"),
                     ReadURLAllText(url));
         }
         //基础主页
@@ -141,6 +141,12 @@ public class Main {
         {
             String url = jarPath + "!/Server.js";
             WriteAllText(MakeFilePath(DirStr,"Server.js"),
+                    ReadURLAllText(url));
+        }
+        //404文件
+        {
+            String url = jarPath + "!/404.html";
+            WriteAllText(MakeFilePath(DirStr,"Build","404.html"),
                     ReadURLAllText(url));
         }
 
