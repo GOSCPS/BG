@@ -45,12 +45,23 @@ import java.util.ArrayList;
 public class Config {
 
     public String Name;
+    public int Port = 8080;
 
+    //渲染器
     public MutablePair<String,String> Render = new MutablePair<>("DEFAULT","DEFAULT");
 
+    //各个插件
     public ArrayList<MutablePair<String,String>> RenderPlugin = new ArrayList<>();
     public ArrayList<MutablePair<String,String>> ServerPlugin = new ArrayList<>();
     public ArrayList<MutablePair<String,MutablePair<String,String>>> ToolList = new ArrayList<>();
+
+    //密匙类型
+    public String KeyStoreInstance = "PKCS12";
+    public String KeyManagerFactoryInstance = "SunX509";
+    //密匙密码
+    public String CertificatePassword = "PassWord";
+    //证书路径
+    public String CertificatePath = "certificate path";
 
 
 }

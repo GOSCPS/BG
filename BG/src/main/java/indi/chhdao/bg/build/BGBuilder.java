@@ -37,8 +37,6 @@ import indi.chhdao.bg.exception.DetailedException;
 import indi.chhdao.bg.markdown.MarkdownParser;
 import indi.chhdao.bg.tools.Tools;
 
-import java.lang.reflect.Field;
-
 /**
  * @author chhdao
  * @version 0.1.0
@@ -98,20 +96,9 @@ public class BGBuilder {
      * @throws Exception 构建错误
      */
     public void MakeBuildInfo(String []args) throws Exception {
-        var ThisClass = this.getClass();
 
         for(var Param:args){
-
-            if(Param.startsWith("-D")){
-                var s = Param.substring(2);
-
-            var VulanName = s.substring(0,s.indexOf("="));
-            var Vulan = s.substring(s.indexOf("=")+1);
-
-            Field f = ThisClass.getField(VulanName);
-            f.set(this, Tools.GetFieldVulan(Vulan,f));
-            }
-            else throw new DetailedException("Param","Param:" + Param,"Not -D");
+            Tools.ReflectionAssignment(this.getClass(),this,Param);
         }
 
         //读取配置文件

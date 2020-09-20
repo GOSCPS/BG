@@ -35,6 +35,7 @@ package indi.chhdao.bg.main;
 import indi.chhdao.bg.api.Config;
 import indi.chhdao.bg.build.BGBuilder;
 import indi.chhdao.bg.exception.DetailedException;
+import indi.chhdao.bg.server.Server;
 import indi.chhdao.bg.tools.Tools;
 
 import java.io.File;
@@ -75,6 +76,12 @@ public class Main {
                 //创建新站点
                 else if(args[0].equals("Init") && args.length == 2){
                     Init(args[1]);
+                }
+                //启动服务器
+                else if(args[0].equals("Server")){
+                    Server server = new Server();
+                    server.Init(Tools.DeleteArrays(args,0));
+                    server.StartUp();
                 }
                 else{
                     System.err.println("Not Found Command");

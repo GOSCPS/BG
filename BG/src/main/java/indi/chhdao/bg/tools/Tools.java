@@ -266,4 +266,25 @@ public class Tools {
             throw new DetailedException("Create File Fall Down",Dirs,"Create File Fall Down");
     }
 
+    /**
+     * 通用解析反射赋值函数
+     * -DName=Vulan 给Name赋值Vulan
+     * @param Cls 类类型
+     * @param obj 实例
+     * @param Param 字符串
+     * @throws Exception 解析异常
+     */
+    public static void ReflectionAssignment(Class<?> Cls,Object obj,String Param) throws Exception{
+        if(Param.startsWith("-D")){
+            var s = Param.substring(2);
+
+            var VulanName = s.substring(0,s.indexOf("="));
+            var Vulan = s.substring(s.indexOf("=")+1);
+
+            Field f = Cls.getField(VulanName);
+            f.set(obj, Tools.GetFieldVulan(Vulan,f));
+        }
+        else throw new DetailedException("Param","Param:" + Param,"Not -D");
+    }
+
 }
