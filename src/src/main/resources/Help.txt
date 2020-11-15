@@ -1,0 +1,8 @@
+Usage:CallCommand [Command] [Param]
+    Command&Param:
+    new     --Create a new repo
+        NAME    --set repo name,default "bg"
+    build   --Build repo
+        -DKey=Value     --set build settings
+
+    See more on https://github.com/GOSCPS/Bg

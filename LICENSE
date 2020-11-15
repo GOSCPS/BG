@@ -1,29 +1,44 @@
-BSD 3-Clause License
+GOSCPS License
 
-Copyright (c) 2020, 彩虹海盗
-All rights reserved.
+Copyright (c) 2020 GOSCPS All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
+Everyone is allowed to copy and publish the full version of this authorization document.
+But no modification to it is allowed.
 
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
 
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
+The distribution and redistribution of source code or binary must comply with all content in this treaty, including modified source code or binary or unmodified source code or binary.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+When distributing and redistributing in binary or source code, the full version of this treaty must be attached.
+
+Without written permission, it is prohibited to support or promote the modified source code or binary in the name of "contributor" or GOSCPS.
+
+The copyright owner or its contributors shall not be liable for any losses, consequences, infringements, etc. caused by the source code or binary system.
+
+The revised source code or binary release or redistribution needs to declare the revised part.
+
+
+-------------------
+GOSCPS 许可证
+
+Copyright (c) 2020 GOSCPS 保留所有权利.
+
+
+每个人都可以复制和发布此授权文档的完整版本。
+但是不允许对其进行任何修改。
+
+
+源代码或二进制的发布及再发布必须遵守本条约中的所有内容，包括修改后的源代码或二进制或未经修改的源代码或二进制。
+
+以二进制或源代码发布及再发布时，必须附带上本条约完整版本。
+
+未经过书面许可，禁止以"贡献者"或GOSCPS的名义支持或推广修改后的源代码或二进制。
+
+对于本源代码或二进制所造成的任何损失，后果，侵权行为等，版权所有人或其贡献者不负任何责任。
+
+修改过的源代码或二进制发布或再发布需要声明修改的部分。
+
+
+-------------------
+如果有歧义，以中文版本为准。
+If there is any ambiguity, the Chinese version shall prevail.

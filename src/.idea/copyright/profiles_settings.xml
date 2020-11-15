@@ -1,0 +1,14 @@
+<component name="CopyrightManager">
+  <settings>
+    <module2copyright>
+      <element module="All" copyright="GOSCPS" />
+    </module2copyright>
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="lenBefore" value="30" />
+      <option name="lenAfter" value="30" />
+      <option name="filler" value=" * " />
+    </LanguageOptions>
+  </settings>
+</component>
