@@ -17,6 +17,10 @@ public class RepoConfig {
     //定义的变量
     public LinkedHashMap<String,String> defined = new LinkedHashMap<>();
 
+    //Scripter变量
+    public LinkedHashMap<String,String> ScripterDefined = new LinkedHashMap<>();
+
+
     //url
     public String URL = "";
 }

@@ -169,9 +169,15 @@ public class Main {
             return;
         }
 
+        if (!Tools.Mkdirs(Tools.Make_File_Path(Base_Path, "Template"))) {
+            Tools.Red_Println("Error:Dir Create Error");
+            System.out.printf("At %s\n", Tools.Make_File_Path(Base_Path, "Template"));
+            return;
+        }
+
         RepoConfig c = new RepoConfig();
         c.name = name;
-        c.defined.put("GFM","true");
+        c.defined.put("GFMSupports","true");
 
         try {
             Tools.Write_All_Text(Tools.Make_File_Path(Base_Path, "Config.json"), Tools.ObjectTOJson(c));

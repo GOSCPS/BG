@@ -38,6 +38,14 @@ public class Tools {
     }
 
     /**
+     * 输出黄色字符
+     * @param s 要输出的字符
+     */
+    public static void Yellow_Println(String s) {
+        System.out.printf("%s%s%s\n", "\033[33m", s, "\033[0m");
+    }
+
+    /**
      * 读取jar内文件
      * @param path 路径
      * @return 返回文件的文本

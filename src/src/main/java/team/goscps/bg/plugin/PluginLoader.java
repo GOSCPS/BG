@@ -22,7 +22,7 @@ public class PluginLoader {
     //Plugin 实例
     public static Object[] plugins = new Object[0];
 
-    //读取自己的Plugin
+    //读取Loader所在的JAR
     public PluginLoader() throws Exception {
         Tools.Green_Println("Load Jar " + this.getClass().getProtectionDomain().getCodeSource().getLocation().getFile());
         LoadJar(this.getClass().getProtectionDomain().getCodeSource().getLocation().getFile());

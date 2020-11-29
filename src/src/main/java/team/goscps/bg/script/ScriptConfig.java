@@ -13,5 +13,5 @@ import java.util.Map;
 
 public class ScriptConfig {
     //环境常量
-    public Map<String,String> EnvironmentalVariable = new LinkedHashMap<>();
+    public static Map<String,String> EnvironmentalVariable = new LinkedHashMap<>();
 }

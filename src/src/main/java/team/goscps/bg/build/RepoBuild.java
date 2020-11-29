@@ -13,6 +13,8 @@ import team.goscps.bg.event.*;
 import team.goscps.bg.plugin.PluginLoader;
 import team.goscps.bg.plugin.PluginVariable;
 import team.goscps.bg.render.RenderManager;
+import team.goscps.bg.script.ScriptConfig;
+import team.goscps.bg.script.Scripter;
 import team.goscps.bg.tool.Tools;
 
 public class RepoBuild {
@@ -123,6 +125,17 @@ public class RepoBuild {
             //写入配置文件
             Tools.Write_All_Text("./Config.json"
                     ,Tools.ObjectTOJson(pluginVariable.GetVariableConfig()));
+
+            //开始渲染
+
+            //添加ScripterDefined
+            for(var s:c.ScripterDefined.keySet()){
+                ScriptConfig.EnvironmentalVariable.put(s,c.ScripterDefined.get(s));
+            }
+
+            Scripter scripter = new Scripter();
+            System.out.printf(scripter.Render(Tools.Read_All_Text("./Template/Template")));
+
         }
         catch(Exception err){
             err.printStackTrace();

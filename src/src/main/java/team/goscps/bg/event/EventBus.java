@@ -35,7 +35,7 @@ public class EventBus {
         public EventPriority level;
     }
 
-    private Map<String,RegisteredPair> registereds = new LinkedHashMap<>();
+    private final Map<String,RegisteredPair> register = new LinkedHashMap<>();
 
     /**
      * 事件是否有结果
@@ -46,9 +46,9 @@ public class EventBus {
     /**
      * 事件的结果
      * @return 通过SetResult设置的结果
-     * @throws Exception 事件无结果
+     * @throws RuntimeException 事件无结果
      */
-    public Object[] GetResult() throws Exception{
+    public Object[] GetResult() throws RuntimeException{
         if(HasResult){
             return Result;
         }
@@ -84,9 +84,9 @@ public class EventBus {
 
     /**
      * 撤销事件
-     * @throws Exception 事件已经被撤销
+     * @throws RuntimeException 事件已经被撤销
      */
-    public void SetCancel() throws Exception{
+    public void SetCancel() throws RuntimeException{
         if(IsCancel && (!CanCancel)){
             throw new RuntimeException("Event Canceled");
         }
@@ -105,7 +105,7 @@ public class EventBus {
      */
     public synchronized void RegisteredEvent(String RegisteredId,Object obj,Method method,String name,EventPriority priority)
     throws Exception{
-        if(registereds.get(RegisteredId) != null){
+        if(register.get(RegisteredId) != null){
             throw new Exception("RegisteredId Is Defined");
         }
 
@@ -114,7 +114,7 @@ public class EventBus {
         p.m = method;
         p.level = priority;
         p.o = obj;
-        registereds.put(RegisteredId,p);
+        register.put(RegisteredId,p);
     }
 
     /**
@@ -122,7 +122,7 @@ public class EventBus {
      * @param RegisteredId 注册时候的ID
      */
     public synchronized void UnRegistered(String RegisteredId){
-        registereds.remove(RegisteredId);
+        register.remove(RegisteredId);
     }
 
     private static class Pair<K,Y>{
@@ -159,7 +159,7 @@ public class EventBus {
         }
 
         //添加注册函数
-        for(var o: registereds.values()){
+        for(var o: register.values()){
             Pair<Method,Object> pair = new Pair<>();
             pair.left = o.m;
             pair.right = o.o;

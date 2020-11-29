@@ -13,6 +13,7 @@ import team.goscps.bg.api.Plugin;
 import team.goscps.bg.event.Event;
 import team.goscps.bg.event.ListenEvent;
 import team.goscps.bg.render.RenderManager;
+import team.goscps.bg.tool.Tools;
 
 @Plugin(PluginVersion = 1, name = "Gfm Supports", Owner = "GOSCPS")
 public class GFMSupports{
@@ -27,9 +28,13 @@ public class GFMSupports{
                 return;
         }
         else{
+            Tools.Yellow_Println("WARNING:GFM Not Setting:default set true");
+
             PluginVariable.SetVariable("GFMSupports","true");
             PluginVariable.SetVariable_File("GFMSupports","true");
         }
+
+        System.out.println("Markdown GFM Supports Enable");
 
         var set = RenderManager.GetOptions();
         set = set.set(TablesExtension.COLUMN_SPANS, false)
